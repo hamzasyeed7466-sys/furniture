@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Furniture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group select,
+        .form-group input[type="checkbox"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+         .form-group input[type="checkbox"] {
+             width: auto;
+             margin-right: 5px;
+         }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+         .payment-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+         }
+          .payment-link:hover {
+              text-decoration: underline;
+          }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Customize Furniture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="room_analysis.html">Room Analysis</a>
+            <a href="furniture_selection.html">Browse Furniture</a>
+            <a href="customize_furniture.html">Customize Furniture</a>
+             <a href="payment_placeholder.html">Payment</a>
+             <a href="order_status.html">Order Status</a>
+             <a href="delivery_placeholder.html">Delivery</a>
+            <!-- Add other navigation links here -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Customize Your Furniture</h2>
+        <form id="customizeForm">
+            <div class="form-group">
+                <label for="furniture-type">Furniture Type:</label>
+                <select id="furniture-type" name="furniture_type">
+                    <option value="">--Select--</option>
+                    <option value="sofa">Sofa</option>
+                    <option value="table">Table</option>
+                    <option value="chair">Chair</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="material">Material:</label>
+                <input type="text" id="material" name="material" placeholder="e.g., Wood, Fabric, Metal">
+            </div>
+             <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" placeholder="e.g., Blue, Red, White">
+            </div>
+             <div class="form-group">
+                <label for="dimensions">Dimensions:</label>
+                <input type="text" id="dimensions" name="dimensions" placeholder="e.g., 150cm W x 80cm D x 70cm H">
+            </div>
+             <div class="form-group">
+                <label>Add Features:</label><br>
+                <input type="checkbox" id="feature1" name="features" value="storage">
+                <label for="feature1">Storage</label><br>
+                 <input type="checkbox" id="feature2" name="features" value="reclining">
+                <label for="feature2">Reclining</label><br>
+            </div>
+            <button type="button" onclick="submitCustomization()">Submit Customization Request</button>
+        </form>
+         <!-- Link to payment placeholder after submission -->
+        <a href="payment_placeholder.html" class="payment-link" id="paymentLink" style="display: none;">Proceed to Payment (Placeholder)</a>
+    </div>
+
+    <script>
+        function submitCustomization() {
+            console.log('Customize form submitted');
+            const furnitureType = document.getElementById('furniture-type').value;
+            const material = document.getElementById('material').value;
+            const color = document.getElementById('color').value;
+            const dimensions = document.getElementById('dimensions').value;
+            const selectedFeatures = Array.from(document.querySelectorAll('input[name="features"]:checked')).map(cb => cb.value);
+
+            console.log('Customization Data:', { furnitureType, material, color, dimensions, selectedFeatures });
+            alert('Customization request submitted (placeholder). Proceed to payment.');
+
+            // Show the payment link after submission (placeholder)
+            document.getElementById('paymentLink').style.display = 'block';
+
+            // In a real application, this data would be sent to a backend for processing,
+            // and the user would be redirected to a payment page with actual order details.
+        }
+    </script>
+
+</body>
+</html>
