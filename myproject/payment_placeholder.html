@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .placeholder-note {
+            margin-top: 20px;
+            text-align: center;
+            color: #d9534f; /* Bootstrap danger color */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Payment Information</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="room_analysis.html">Room Analysis</a>
+            <a href="furniture_selection.html">Browse Furniture</a>
+            <a href="customize_furniture.html">Customize Furniture</a>
+            <a href="payment_placeholder.html">Payment</a>
+            <a href="order_status.html">Order Status</a>
+            <a href="delivery_placeholder.html">Delivery</a>
+            <!-- Add other navigation links here -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Advance Payment for Custom Order</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order_id" value="[Placeholder Order ID]" readonly>
+            </div>
+            <div class="form-group">
+                <label for="amount-due">Amount Due:</label>
+                <input type="text" id="amount-due" name="amount_due" value="$XXX.XX - 50% Advance (Placeholder)" readonly>
+            </div>
+            <div class="form-group">
+                <label for="payment-method">Payment Method:</label>
+                 <input type="text" id="payment-method" name="payment_method" placeholder="e.g., Credit Card, PayPal (Placeholder)">
+                 <!-- Or use a select dropdown for placeholder options -->
+                 <!--
+                <select id="payment-method" name="payment_method">
+                    <option value="">--Select Method (Placeholder)--</option>
+                    <option value="credit_card">Credit Card (Placeholder)</option>
+                    <option value="paypal">PayPal (Placeholder)</option>
+                </select>
+                -->
+            </div>
+            <button type="button" onclick="proceedToPayment()">Proceed to Payment</button>
+        </form>
+        <p class="placeholder-note">Note: This is a placeholder for payment processing. Actual secure payment requires a backend.</p>
+    </div>
+
+    <script>
+        function proceedToPayment() {
+            console.log('Proceed to Payment button clicked');
+            // In a real application, this would initiate the payment process.
+            alert('Payment processing is a placeholder. Actual payment requires a secure backend.');
+        }
+    </script>
+
+</body>
+</html>
